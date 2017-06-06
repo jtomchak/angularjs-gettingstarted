@@ -1,6 +1,10 @@
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
 import '../style/app.css';
+
+import {home} from './components/home/home';
+import {blog} from './components/blog/blog';
 
 let app = () => {
   return {
@@ -12,13 +16,16 @@ let app = () => {
 
 class AppCtrl {
   constructor() {
-    this.url = 'https://github.com/preboot/angular-webpack';
   }
 }
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [])
+angular.module(MODULE_NAME, [
+  uiRouter,
+  home.name,
+  blog.name
+])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
 

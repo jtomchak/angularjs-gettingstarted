@@ -1,7 +1,6 @@
 /* styles in src/style directory are applied to the whole page */
 body {
-  background: #0147A7;
-  color: #fff;
+  color: black;
 }
 
 a {
@@ -20,3 +19,8 @@ footer {
   text-align: center;
   font-size: 0.8em;
 }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
