@@ -24,7 +24,6 @@ const MODULE_NAME = 'app';
 angular.module(MODULE_NAME, [
   uiRouter,
   home.name,
-  blog.name
 ])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
