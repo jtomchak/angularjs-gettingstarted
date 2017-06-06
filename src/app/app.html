@@ -1,18 +1,13 @@
 <div id="app">
-  <header>
-    <nav>
-      <div class="logo">
-        <span ui-sref="home">
-          <a ui-sref="home">ngBlog</a>
-        </span>
-      </div>
-      <div class="links">
-        <a ui-sref="blog">blog</a>
-      </div>
-    </nav>
-  </header>
+<header>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a ui-sref="home">ngBlog</a></li>
+    <li role="presentation"><a ui-sref="blog">blog</a></li>
+  </ul>
+</header>
   <main>
     <div ui-view></div>
   </main>
   <footer></footer>
 </div>
+

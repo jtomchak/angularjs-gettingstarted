@@ -1,6 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-
+import 'bootstrap/dist/css/bootstrap.css';
 import '../style/app.css';
 
 import {home} from './components/home/home';
