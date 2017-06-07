@@ -22,16 +22,12 @@ describe('Blog', () => {
   });
 
   describe('directive', ()=> {
-    // TODO: test the directive to make sure it has the
-    // right DDO and template and controller
   });
 
   describe('controller', ()=> {
-    // TODO: test the controller
   });
 
   describe('template', ()=> {
-    // TODO: test the template? yup
     // get creative
   });
 });
