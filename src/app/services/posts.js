@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const posts = ($http, API, $q) => {
+const posts = ($http, API) => {
   let allPosts = [];
 
   const get = () => {
@@ -17,8 +17,9 @@ const posts = ($http, API, $q) => {
     return allPosts;
   };
 
+  return {get, getState};
 };
 
-posts.$inject = ['$http', 'API', '$q'];
+posts.$inject = ['$http', 'API'];
 
 export {posts};

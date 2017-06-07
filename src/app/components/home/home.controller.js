@@ -15,7 +15,6 @@ class HomeController {
     this.Posts.get()
       .then(() => {
         this.posts = this.Posts.getState();
-        console.log(this.Posts);
       });
   }
 }
