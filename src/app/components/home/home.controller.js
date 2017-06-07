@@ -11,11 +11,8 @@ class HomeController {
     this.getPosts();
   }
   
+  //TODO: Ok lets get some posts!!!
   getPosts() {
-    this.Posts.get()
-      .then(() => {
-        this.posts = this.Posts.getState();
-      });
   }
 }
 
