@@ -10,7 +10,8 @@ class HomeController {
     this.Posts = Posts;
     this.getPosts();
   }
-  
+ //TODO: let's make posts show in the view
+ //BONOUS: only the first 10 
   getPosts() {
     this.Posts.get()
       .then(() => {
