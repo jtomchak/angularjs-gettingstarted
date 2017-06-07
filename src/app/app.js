@@ -7,6 +7,9 @@ import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
 import {navbar} from './components/navbar/navbar';
 
+
+import {service} from './services/service';
+
 let app = () => {
   return {
     template: require('./app.html'),
@@ -26,7 +29,8 @@ angular.module(MODULE_NAME, [
   uiRouter,
   home.name,
   blog.name,
-  navbar.name
+  navbar.name,
+  service.name
 
 ])
   .directive('app', app)

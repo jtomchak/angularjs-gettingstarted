@@ -8,7 +8,6 @@ class NavbarController {
   constructor($location) {
       this.$location = $location;
     }
-//TODO: Implement ME!!!!!!!
     isActive(viewLocation) {
        return viewLocation == this.$location.path()
     };
