@@ -1,8 +1,8 @@
 import {api} from './api';
-import {posts} from './posts';
+import {postService} from './postService';
 import angular from 'angular';
 
 export const service = angular.module('service', [])
   .constant('API', api)
-  .factory('Posts', posts);
+  .factory('PostService', postService);
 

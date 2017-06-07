@@ -5,21 +5,21 @@ import _ from 'lodash';
 class HomeController {
   // bind to this and not $scope
   // because of controllerAs.
-  constructor(Posts) {
+  constructor(PostService) {
     this.title = 'Welcome to the blog!';
-    this.Posts = Posts;
+    this.PostService = PostService;
     this.getPosts();
   }
  //TODO: let's make posts show in the view
  //BONOUS: only the first 10 
   getPosts() {
-    this.Posts.get()
+    this.PostService.get()
       .then(() => {
-        this.posts = this.Posts.getState();
+        this.posts = this.PostService.getState();
       });
   }
 }
 
-HomeController.$inject = ['Posts'];
+HomeController.$inject = ['PostService'];
 // could also just export the class up top as well
 export {HomeController};
