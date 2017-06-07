@@ -5,6 +5,7 @@ import '../style/app.css';
 
 import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
+import {navbar} from './components/navbar/navbar';
 
 let app = () => {
   return {
@@ -24,7 +25,9 @@ const MODULE_NAME = 'app';
 angular.module(MODULE_NAME, [
   uiRouter,
   home.name,
-  blog.name
+  blog.name,
+  navbar.name
+
 ])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
