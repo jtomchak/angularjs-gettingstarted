@@ -6,8 +6,8 @@
       </div>
     <h3>We blog about the angulars</h3>
     </div>
-    <ul class="list-group" ng-repeat="post in vm.posts | limitTo:10">
-      <li class="list-group-item">{{post.title}}</li>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="post in vm.posts | limitTo:10">{{post.title}}</li>
     </ul>
   </div>
 </section>
