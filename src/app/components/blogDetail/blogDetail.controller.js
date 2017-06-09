@@ -4,7 +4,6 @@ class BlogDetailController {
   constructor(PostService, $stateParams) {
     this.PostService = PostService;
     this.post = this.PostService.getPostById($stateParams.postId);
-    console.log(this.post);
   }
   
 }
