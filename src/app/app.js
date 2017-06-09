@@ -36,6 +36,10 @@ angular.module(MODULE_NAME, [
 
 ])
   .directive('app', app)
-  .controller('AppCtrl', AppCtrl);
+  .controller('AppCtrl', AppCtrl)
+  .run(['PostService', function(PostService) {
+        // Etc. Initialize here.
+        PostService.init();
+    }]);
 
 export default MODULE_NAME;
