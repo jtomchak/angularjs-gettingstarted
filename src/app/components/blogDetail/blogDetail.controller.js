@@ -3,17 +3,10 @@ import _ from 'lodash';
 class BlogDetailController {
   constructor(PostService, $stateParams) {
     this.PostService = PostService;
-    this.postId = $stateParams.postId;
-    this.getPostById();
-    console.log(this.postId);
+    this.post = this.PostService.getPostById($stateParams.postId);
+    console.log(this.post);
   }
-  getPostById() {
-    this.PostService.get()
-      .then(() => {
-        this.posts = this.PostService.getState();
-      });
-  }
-
+  
 }
 
 BlogDetailController.$inject = ['PostService', '$stateParams'];

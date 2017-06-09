@@ -9,6 +9,7 @@ class NavbarController {
       this.$location = $location;
     }
     isActive(viewLocation) {
+      //TODO: grep out the root of location
        return viewLocation == this.$location.path()
     };
 }

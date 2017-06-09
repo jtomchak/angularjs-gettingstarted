@@ -17,7 +17,10 @@ const postService = ($http, API) => {
     return allPosts;
   };
 
-  return {get, getState};
+  const getPostById = postId => allPosts.find(x => x.id == postId)
+  
+
+  return {get, getState, getPostById};
 };
 
 postService.$inject = ['$http', 'API'];
