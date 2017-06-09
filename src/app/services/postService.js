@@ -6,10 +6,12 @@ const postService = ($http, API) => {
   const init = () => {
     $http.get(`${API.url}/posts`)
       .then(({data}) => {
-        allPosts = data.map(post => {
+       var tempPosts = data.map(post => {
           // post.slug = post.title.replace(/\s+/g, '-');
           return post;
         });
+        allPosts.length = 0;
+        allPosts.push.apply(allPosts, tempPosts);
       });
   }
 
@@ -30,7 +32,7 @@ const postService = ($http, API) => {
   const getPostById = postId => allPosts.find(x => x.id == postId)
   
 
-  return {get, getState, getPostById, init};
+  return {get, getState, getPostById, init, allPosts};
 };
 
 postService.$inject = ['$http', 'API'];

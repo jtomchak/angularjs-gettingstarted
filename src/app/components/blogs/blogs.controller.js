@@ -7,7 +7,7 @@ class BlogsController {
     this.$location = $location;
     this.$state = $state;
     // this.getPosts();
-    this.posts = this.PostService.getState();
+    this.posts = PostService.getState();
   }
 
   getPosts() {
