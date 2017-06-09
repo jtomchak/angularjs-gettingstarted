@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../style/app.css';
 
 import {home} from './components/home/home';
-import {blog} from './components/blog/blog';
+import {blogs} from './components/blogs/blogs';
+import {blogDetail} from './components/blogDetail/blogDetail';
 import {navbar} from './components/navbar/navbar';
 
 
@@ -28,9 +29,10 @@ const MODULE_NAME = 'app';
 angular.module(MODULE_NAME, [
   uiRouter,
   home.name,
-  blog.name,
+  blogs.name,
+  blogDetail.name,
   navbar.name,
-  service.name
+  service.name,
 
 ])
   .directive('app', app)

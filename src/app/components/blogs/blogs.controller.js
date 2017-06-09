@@ -1,10 +1,11 @@
 import _ from 'lodash';
 
-class BlogController {
-  constructor(PostService, $location) {
+class BlogsController {
+  constructor(PostService, $location, $state) {
     this.message = 'The latest from the blog!';
     this.PostService = PostService;
     this.$location = $location;
+    this.$state = $state;
     this.getPosts();
   }
 
@@ -19,10 +20,10 @@ class BlogController {
 //TODO: what we want is for them to be taken to a 'details' page with all the info from that post
 //TODO BONOUS: back button on page, not browser back to take them back to the full list
   onSelect(postId) {
-    this.$location.path('details/' + postId.toString());//Go to location!
+    this.$state.transitionTo('blogs.detail', {postId:2});
   }
 }
 
-BlogController.$inject = ['PostService', '$location'];
+BlogsController.$inject = ['PostService', '$location', '$state'];
 // could also just export the class up top as well
-export {BlogController};
+export {BlogsController};
