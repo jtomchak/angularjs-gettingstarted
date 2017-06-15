@@ -34,7 +34,16 @@ module.exports = {
         jQuery: 'jquery',
         $: 'jquery',
         jquery: 'jquery'
-    })
+    }),
+    // uglfy / minify js
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            sourceMap: true,
+            compress: {
+                drop_console: true
+            },
+            mangle: false
+        })
 ],
 
   stylus: {
